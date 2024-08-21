@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fa" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind cnd and configration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <link rel="stylesheet" href="./main.css">
+    <title>وب سایت شخصی</title>
+</head>
+<body class="overflow-x-hidden dark:bg-darkTheme dark:text-white">
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
+        <img class="w-full" src="./assets/images/header-bg-color.png" alt="hader image">
+    </div>
+    <!-- ----------------- navbar -------------------- -->
+    <nav class="w-full px-5 py-4 fixed lg:px-8 xl:px-[8%] flex items-center justify-between z-50 ">
+        <img class="w-28 ml-14 cursor-pointer dark:hidden" src="./assets/images/logo2.png" alt="logo">
+        <img class="w-28 ml-14 cursor-pointer hidden dark:block" src="./assets/images/logo2_dark.png" alt="logo">
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full py-3 px-12 bg-white shadow-sm bg-opacity-50 dark:bg-transparent dark:border dark:border-white/50">
+            <li>
+                <a href="#home">خانه</a>
+            </li>
+            <li>
+                <a href="#about">درباره من</a>
+            </li>
+            <li>
+                <a href="#services">خدمات ها</a>
+            </li>
+            <li>
+                <a href="#work">شغل من</a>
+            </li>
+            <li>
+                <a href="#contact">تماس با من</a>
+            </li>
+        </ul>
+        <div class="flex items-center gap-4">
+            <button onclick="toggleTheme()">
+                <img class="w-6 dark:hidden" src="./assets/images/moon_icon.png" alt="dark-mode icon " >
+                <img class="w-6 hidden dark:block" src="./assets/images/sun_icon.png" alt="dark-mode icon" >
+            </button>
+            <a class="hidden md:flex items-center gap-3 py-2.5 px-10 border border-gray-500 rounded-full ml-4 dark:border-white/50" href="#contact">
+                تماس
+                <img class="w-3 -rotate-90 dark:hidden" src="./assets/images/arrow-icon.png" alt="arrow icon">
+                <img class="w-3 -rotate-90 hidden dark:block" src="./assets/images/arrow-icon-dark.png" alt="arrow icon">
+            </a>
+            <button class="block md:hidden" onclick="openMenu()">
+                <img class="w-6 dark:hidden" src="./assets/images/menu-black.png" alt="menu icon">
+                <img class="w-6 hidden dark:block" src="./assets/images/menu-white.png" alt="menu icon">
+            </button>
+        </div>
+
+        <!-- mobile menu  -->
+         <ul class="flex flex-col gap-4 py-20 px-10 fixed -left-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 md:hidden font-[shabnam-md] font-semibold dark:bg-[#2a004a] dark:text-white" id="side-menu">
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+                <img class="w-6 cursor-pointer dark:hidden" src="./assets/images/close-black.png" alt="close icon">
+                <img class="w-6 cursor-pointer hidden dark:block" src="./assets/images/close-white.png" alt="close icon">
+            </div>
+            <li>
+                <a href="#home" onclick="closeMenu()">خانه</a>
+            </li>
+            <li>
+                <a href="#about" onclick="closeMenu()">درباره من</a>
+            </li>
+            <li>
+                <a href="#services" onclick="closeMenu()">خدمات ها</a>
+            </li>
+            <li>
+                <a href="#work" onclick="closeMenu()">شغل من</a>
+            </li>
+            <li>
+                <a href="#contact" onclick="closeMenu()">تماس با من</a>
+            </li>
+         </ul>
+    </nav>
+    <!-- ---------- header ------------- -->
+    <div id="home" class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+        <img class="w-32 rounded-full" src="./assets/images/person.JPG" alt="profile image">
+        <h3 class="flex items-end gap-2 text-xl md:text-2xl mx-3 font-semibold">
+            سلام! من یعقوب هستم
+            <img class="w-6" src="./assets/images/hand-icon.png" alt="hand icon">
+        </h3>
+        <h1 class="text-3xl sm:text-6xl lg:text-[66px] font-[shabnam-md] font-semibold">توسعه دهنده وب سایت</h1>
+        <p class="max-w-2xl mx-auto">من یک توسعه دهنده نرم افزار ، علاقه مند به حوزه وب و موبایل هستم</p>
+        <div class="flex flex-col sm:flex-row items-center gap-4 mt-3">
+            <a class="px-10 py-3 border rounded-full bg-gradient-to-l from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent" href="#contact">
+                تماس با من
+                <img class="w-4 rotate-180" src="./assets/images/right-arrow-white.png" alt="arrow icon">
+            </a>
+            <a class="px-10 py-3 border border-gray-500 rounded-full bg-white flex items-center gap-2 dark:text-black" href="./assets/images/logo.png" download>
+                رزومه من
+                <img class="w-4" src="./assets/images/download-icon.png" alt="arrow icon">
+            </a>
+        </div>
+    </div> 
+
+    <!-- ------------- about me --------------- -->
+    <div class="w-full px-[12%] py-10 scroll-mt-20" id="about">
+        <h4 class="text-lg text-center mt-2">معرفی</h4>
+        <h2 class="text-center text-5xl font-[shabnam-bold] mt-4">درباره من</h2>
+        <div class="w-full flex flex-col lg:flex-row items-center gap-20 my-20">
+            <div class="max-w-max mx-auto relative">
+                <img class="w-64 sm:w-80 rounded-3xl max-w-none object-cover" src="./assets/images/user-person.jpg" alt="person image">
+                <div class="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center">
+                    <img class="w-full animate-spin_slow" src="./assets/images/circular-text.png" alt="circular image">
+                    <img class="w-1/4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" src="./assets/images/dev-img.png" alt="devicon">
+                </div>
+            </div>
+            <div class="flex-1">
+                <p class="mb-10 max-w-2xl">
+                    من یک توسعه دهنده وب سایت علاقه مند به بک اند هستم تا این زمان به صورت خودآموز شروع به یادگیری در حوزه فرانت اند ، بک اند و اندروید کرده ام و همچنان علاقه مند به یادگیری هستم
+                </p>
+                <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+                    <li class="border border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 hover:shadow-[4px_4px_0_#000] duration-500 dark:border-white dark:hover:bg-darkHover/50 dark:hover:shadow-white">
+                        <img class="w-7 mt-3 dark:hidden" src="./assets/images/code-icon.png" alt="code image">
+                        <img class="w-7 mt-3 hidden dark:block" src="./assets/images/code-icon-dark.png" alt="code image">
+                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white/80">Languages</h3>
+                        <p class="">
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Bootstrap</li>
+                                <li>Tailwind</li>
+                                <li>React Js</li>
+                                <li>PHP</li>
+                                <li>Laravel</li>
+                            </ul>
+                        </p>
+                    </li>
+                    <li class="border border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 hover:shadow-[4px_4px_0_#000] duration-500 dark:border-white dark:hover:bg-darkHover/50 dark:hover:shadow-white">
+                        <img class="w-7 mt-3 dark:hidden" src="./assets/images/edu-icon.png" alt="code image">
+                        <img class="w-7 mt-3 hidden dark:block" src="./assets/images/edu-icon-dark.png" alt="code image">
+                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white/80">Education</h3>
+                        <p>دانشجوی کارشناسی مهندسی کامپیوتر گرایش نرم افزار</p>
+                    </li>
+                    <li class="border border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 hover:shadow-[4px_4px_0_#000] duration-500 dark:border-white dark:hover:bg-darkHover/50 dark:hover:shadow-white">
+                        <img class="w-7 mt-3 dark:hidden" src="./assets/images/project-icon.png" alt="code image">
+                        <img class="w-7 mt-3 hidden dark:block" src="./assets/images/project-icon-dark.png" alt="code image">
+                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white/80">Projects</h3>
+                        <p>توسعه چندین نمونه کار بزرگ و بسیاری از نمونه کار هاای کوچک</p>
+                    </li>
+                </ul>
+                <h4 class="my-7 text-gray-700 dark:text-white/80">ابزار های که من  استفاده می کنم</h4>
+                <ul class="flex items-center gap-3 sm:gap-5">
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img class="w-5 sm:w-7" src="./assets/images/vscode.png" alt="tool image">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img class="w-5 sm:w-7" src="./assets/images/phpstorm.png" alt="tool image">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img class="w-5 sm:w-7" src="./assets/images/android-studio-icon.png" alt="tool image">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img class="w-5 sm:w-7" src="./assets/images/git.png" alt="tool image">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------ services -----------------   -->
+    <div id="services" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h4 class="text-lg text-center mt-2">آن چیزی که من ارائه می دهم</h4>
+        <h2 class="text-center text-5xl font-[shabnam-bold] mt-4">خدمات من</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12">من به صورت خودآموز شروع به یادگیری در حوزه وب سایت و اندرید کرده ام اینک مبتدی هستم ولی خداروشکر توانایی پیاده سازی یک وب سایت به طور کامل و ساخت اپلیکیشن اندرید را دارم </p>
+        <div class="grid grid-cols-auto gap-6 my-10">
+            <div class="border border-gray-400 rounded-lg px-8 py-12 cursor-pointer hover:shadow-[4px_4px_0_#000] hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <img src="./assets/images/web-icon.png" alt="web icon" class="w-10">
+                <h3 class="text-lg my-4 text-gray-600 dark:text-white">طراحی وب سایت</h3>
+                <p class="text-sm text-gray-600 leading-7 dark:text-white/80">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</p>
+                <a href="#" class="flex items-center gap-2 text-sm mt-5">
+                    بیشتر بخوانید
+                    <img class="rotate-180 w-4" src="./assets/images/right-arrow.png" alt="icon" >
+                </a>
+            </div>
+            <div class="border border-gray-400 rounded-lg px-8 py-12 cursor-pointer hover:shadow-[4px_4px_0_#000] hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <img src="./assets/images/mobile-icon.png" alt="web icon" class="w-10">
+                <h3 class="text-lg my-4 text-gray-600 dark:text-white">اپلیکیشن موبایل</h3>
+                <p class="text-sm text-gray-600 leading-7 dark:text-white/80">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</p>
+                <a href="#" class="flex items-center gap-2 text-sm mt-5">
+                    بیشتر بخوانید
+                    <img class="rotate-180 w-4" src="./assets/images/right-arrow.png" alt="icon" >
+                </a>
+            </div>
+            <div class="border border-gray-400 rounded-lg px-8 py-12 cursor-pointer hover:shadow-[4px_4px_0_#000] hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <img src="./assets/images/web-icon.png" alt="web icon" class="w-10">
+                <h3 class="text-lg my-4 text-gray-600 dark:text-white">فرانت اند</h3>
+                <p class="text-sm text-gray-600 leading-7 dark:text-white/80">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</p>
+                <a href="#" class="flex items-center gap-2 text-sm mt-5">
+                    بیشتر بخوانید
+                    <img class="rotate-180 w-4" src="./assets/images/right-arrow.png" alt="icon" >
+                </a>
+            </div>
+            <div class="border border-gray-400 rounded-lg px-8 py-12 cursor-pointer hover:shadow-[4px_4px_0_#000] hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+                <img src="./assets/images/web-icon.png" alt="web icon" class="w-10">
+                <h3 class="text-lg my-4 text-gray-600 dark:text-white">بک اند</h3>
+                <p class="text-sm text-gray-600 leading-7 dark:text-white/80">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</p>
+                <a href="#" class="flex items-center gap-2 text-sm mt-5">
+                    بیشتر بخوانید
+                    <img class="rotate-180 w-4" src="./assets/images/right-arrow.png" alt="icon" >
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------- my work --------------- -->
+    <div id="work" class="w-full px-[12%] py-10 scroll-mt-20 ">
+        <h4 class="text-lg text-center mt-2">نمونه کارهای من</h4>
+        <h2 class="text-center text-5xl font-[shabnam-bold] mt-4">آخرین پروژه های من</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12">خوش آمدید! همه این ها نمونه کارهای است که من توسعه داده ام. <br /> در بین نرم افزارهای که که توسعه داده شده کاوش کنید</p>
+        <div class="grid grid-cols-auto gap-5 my-10">
+            <div class="aspect-square bg-[url('./assets/images/work-1.png')] bg-no-repeat bg-center bg-cover rounded-lg cursor-pointer relative group">
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold">پروژه فرانت اند</h2>
+                        <p class="text-sm text-gray-700">طراحی وب سایت</p>
+                    </div>
+                    <div class="border border-black rounded-full w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                        <img class="w-5" src="./assets/images/send-icon.png" alt="send icon">
+                    </div>
+
+                </div>
+            </div>
+            <div class="aspect-square bg-[url('./assets/images/work-2.png')] bg-no-repeat bg-center bg-cover rounded-lg cursor-pointer relative group">
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold">اپلیکیشن یادداشت</h2>
+                        <p class="text-sm text-gray-700">اپلیکیشن موبایل</p>
+                    </div>
+                    <div class="border border-black rounded-full w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                        <img class="w-5" src="./assets/images/send-icon.png" alt="send icon">
+                    </div>
+
+                </div>
+            </div>
+            <div class="aspect-square bg-[url('./assets/images/work-3.png')] bg-no-repeat bg-center bg-cover rounded-lg cursor-pointer relative group">
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold">طراحی وب سایت</h2>
+                        <p class="text-sm text-gray-700">طراحی وب سایت</p>
+                    </div>
+                    <div class="border border-black rounded-full w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                        <img class="w-5" src="./assets/images/send-icon.png" alt="send icon">
+                    </div>
+
+                </div>
+            </div>
+            <div class="aspect-square bg-[url('./assets/images/work-4.png')] bg-no-repeat bg-center bg-cover rounded-lg cursor-pointer relative group">
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <h2 class="font-semibold">پروژه بک اند</h2>
+                        <p class="text-sm text-gray-700">طراحی وب سایت</p>
+                    </div>
+                    <div class="border border-black rounded-full w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                        <img class="w-5" src="./assets/images/send-icon.png" alt="send icon">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <a href="#" class="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-[#2a004a]">
+            مشاهدهمه
+            <img src="./assets/images/right-arrow-bold.png" alt="icon" class="w-4 rotate-180 dark:hidden">
+            <img src="./assets/images/right-arrow-bold-dark.png" alt="icon" class="w-4 rotate-180 hidden dark:block">
+        </a>
+    </div>
+    <!-- ----------------------- contact ----------------- -->
+    <div id="contact" class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./assets/images/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none">
+        <h4 class="text-lg text-center mt-2">تماس با من</h4>
+        <h2 class="text-center text-5xl font-[shabnam-bold] mt-4">پیام دهید</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12">خوشحال می شوم که با من در تماس باشید <br /> لطفا اگر سوال ، نظر یا بازخوردی دارید به من پیام دهید</p>
+        <form action="" class="max-w-2xl mx-auto">
+            <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
+                <input type="text" placeholder="نام خود را وارد کنید" class=" flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90">
+                <input type="text" placeholder="ایمیل خود را وارد کنید" class=" flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90">
+            </div>
+            <textarea name="" id="" rows="6" placeholder="پیام خود را بنویسید" class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"></textarea>
+            <button class="py-3 mt-5 px-8 w-max flex items-center justify-center gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover">
+                ارسال پیام
+                <img src="./assets/images/right-arrow.png" alt="icon" class="w-4 rotate-180">
+            </button>
+        </form>
+
+    </div>
+    <!-- ------------------- foooter ------------------------- -->
+     <div class="mt-20">
+        <div class="text-center">
+            <img src="./assets/images/logo2.png" alt="logo" class="w-36 mx-auto mb-2 dark:hidden">
+            <img src="./assets/images/logo2_dark.png" alt="logo" class="w-36 mx-auto mb-2 hidden dark:block">
+            <div class="w-max flex items-center gap-2 mx-auto">
+                <img src="./assets/images/mail_icon.png" alt="icon" class="w-6 dark:hidden">
+                <img src="./assets/images/mail_icon_dark.png" alt="icon" class="w-6 hidden dark:block">
+                yaghoob004242@gmail.com
+            </div>
+        </div>
+        <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] my-12 py-6">
+            <p>Created By Yaghoob © 2024</p>
+            <ul class="flex items-center justify-center gap-10 mt-4 sm:mt-0">
+                <li>
+                    <a href="https://github.com/yaghobyy">گیت هاب</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/yaghobyy/">لینکدین</a>
+                </li>
+            </ul>
+        </div>
+     </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
